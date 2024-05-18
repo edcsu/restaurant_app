@@ -15,7 +15,12 @@ const Navbar = () => {
                 <Link href={"/contact"}> Contact</Link>
             </div>
             <div className='text-xl md:font-bold md:text-center'>
-                <Link href={"/"}> Ske Restaurant</Link>
+                <Link href={"/"} className='flex gap-2 items-center'> 
+                    <Image className="w-auto h-10 md:h-20 xl:h-20" src={"/logo.jpeg"} width={100} height={100} alt="logo" />
+                    <span className=''>
+                        Ske Restaurant
+                    </span>
+                </Link>
             </div>
             {/* mobile menu */}
             <div className='md:hidden flex-1'>
