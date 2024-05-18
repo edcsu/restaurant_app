@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import CartIcon from './CartIcon';
 
 const links = [
     { id: 1, title: "Home", url: "/"},
@@ -13,15 +14,18 @@ const links = [
 
 const Menu = () => {
     const [open, setOpen] = useState(false)
+    const user = false
+
     return ( 
         <div>
             {!open ? (<Image src={"/open-in-app.svg"} alt='open menu' width={20} height={20}onClick={() => setOpen(true)} />) :
             (<Image src={"/close-circle.svg"} alt='open menu' width={20} height={20} onClick={() => setOpen(false)}/>)}
-            <div className='bg-brown-500 text-white absolute left-0 top-24 w-full h-[calc(100vh-6rem)] flex flex-col gap-8 items-center justify-center text-3xl z-10'>
-                {links.map(link => <Link key={link.id} href={link.url}>{link.title}</Link>)}
-                <Link href={"/login"}>Login</Link>
-                <Link href={"/cart"}>Cart</Link>
-            </div>
+            { open && <div className=' text-white bg-red-500 absolute left-0 top-24 w-full h-[calc(100vh-6rem)] flex flex-col gap-8 items-center justify-center text-3xl z-10'>
+                {links.map(link => <Link key={link.id} href={link.url} onClick={()=> setOpen(false)} >{link.title}</Link>)}
+                { user ? (<Link href={"/login"} onClick={()=> setOpen(false)} >Login</Link>)
+                 : (<Link href={"/login"} onClick={()=> setOpen(false)} >Orders</Link>) }
+                <CartIcon />
+            </div> }
         </div>
      );
 }
