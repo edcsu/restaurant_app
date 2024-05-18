@@ -18,8 +18,8 @@ const Menu = () => {
 
     return ( 
         <div>
-            {!open ? (<Image src={"/open-in-app.svg"} alt='open menu' width={20} height={20}onClick={() => setOpen(true)} />) :
-            (<Image src={"/close-circle.svg"} alt='open menu' width={20} height={20} onClick={() => setOpen(false)}/>)}
+            {!open ? (<Image src={"/open-in-app.png"} alt='open menu' width={20} height={20}onClick={() => setOpen(true)} />) :
+            (<Image src={"/close-circle.png"} alt='open menu' width={20} height={20} onClick={() => setOpen(false)}/>)}
             { open && <div className=' text-white bg-orange-500 absolute left-0 top-24 w-full h-[calc(100vh-6rem)] flex flex-col gap-8 items-center justify-center text-3xl z-10'>
                 {links.map(link => <Link key={link.id} href={link.url} onClick={()=> setOpen(false)} >{link.title}</Link>)}
                 { user ? (<Link href={"/login"} onClick={()=> setOpen(false)} >Login</Link>)

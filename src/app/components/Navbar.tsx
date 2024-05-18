@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Navbar = () => {
     const user = false
     return ( 
-        <div className='h-12 md:h-24 lg:px-29 xl:px-40 text-orange-500 p-4 flex items-center justify-between gap-2 border-b-2 border-b-orange-500 uppercase'>
+        <div className='h-12 md:h-24 lg:px-20 xl:px-40 text-orange-500 p-4 flex items-center justify-between gap-2 border-b-2 border-b-orange-500 uppercase'>
             {/* left links */}
             <div className='hidden md:flex gap-4 flex-1'>
                 <Link href={"/"}> Home</Link>
@@ -23,7 +23,7 @@ const Navbar = () => {
                 </Link>
             </div>
             {/* mobile menu */}
-            <div className='md:hidden flex-1'>
+            <div className='md:hidden'>
                 <Menu />
             </div>
             {/* right links */}
