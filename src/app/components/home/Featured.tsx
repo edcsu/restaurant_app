@@ -4,7 +4,7 @@ import { featuredProducts } from '../../../../data';
 
 const Featured = () => {
     return ( 
-        <div className='w-screen overflow-x-auto text-red-500'>
+        <div className='w-screen overflow-x-auto text-orange-500'>
             {/* wrapper */}
             <div className='w-max flex'>
                 {/* single item */}
@@ -19,7 +19,7 @@ const Featured = () => {
                         <div className=' flex-1 flex flex-col items-center justify-center gap-4'>
                             <h1 className='text-xl font-bold uppercase xl:text-2xl 2xl:text-3xl'>{product.title}</h1>
                             <p className='p-4 2xl:p-8'>{product.desc}</p>
-                            <span className='tex-xl font-bold'>shs {product.price}</span>
+                            <span className='tex-xl font-bold'>Shs {product.price}</span>
                             <button className='bg-green-500 text-white p-3 rounded-md flex gap-2'>
                             <span className=''>
                                 Add to cart
