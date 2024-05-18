@@ -31,14 +31,14 @@ const Slider = () => {
     })
 
     return ( 
-        <div className='flex flex-col h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)]'>
-            <div className='h-1/2 flex items-center justify-center flex-col gap-8 text-red-500 font-bold'>
+        <div className='flex flex-col h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] lg:flex-row bg-gray-100'>
+            <div className='h-1/2 lg:h-full  lg:w-1/2 flex items-center justify-center flex-col gap-8 text-red-500 font-bold'>
                 <h1 className='text-5xl md:text-6xl xl:text-7xl text-center uppercase p-4 md:p-10'>
                     {slides[currentSlide].title}
                 </h1>
                 <button className='bg-green-500 text-white py-4 px-8 rounded-md'>Order now</button>
             </div>
-            <div className='w-full h-1/2 relative'>
+            <div className='w-full lg:w-1/2 h-1/2 lg:h-full relative'>
                 <Image src={slides[currentSlide].image} alt='order now' fill className='object-cover'/>
             </div>
         </div>
