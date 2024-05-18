@@ -36,10 +36,15 @@ const Slider = () => {
                 <h1 className='text-5xl md:text-6xl xl:text-7xl text-center uppercase p-4 md:p-10'>
                     {slides[currentSlide].title}
                 </h1>
-                <button className='bg-green-500 text-white py-4 px-8 rounded-md'>Order now</button>
+                <button className='bg-green-500 text-white py-4 px-8 rounded-md flex gap-2'>
+                <span>
+                    Order now
+                </span>
+                <Image src={"/order.png"} alt='order now' width={20} height={20} className=''/>
+                </button>
             </div>
             <div className='w-full lg:w-1/2 h-1/2 lg:h-full relative'>
-                <Image src={slides[currentSlide].image} alt='order now' fill className='object-cover'/>
+                <Image src={slides[currentSlide].image} alt='slide image' fill className='object-cover'/>
             </div>
         </div>
      );
