@@ -13,10 +13,10 @@ const Offer = () => {
                 </p>
                 <CountDown />
                 <button className='bg-green-500 text-white py-4 px-8 rounded-md flex gap-2'>
-                <span>
-                    Order now
-                </span>
-                <Image src={"/order.png"} alt='order now' width={20} height={20} className=''/>
+                    <span>
+                        Order now
+                    </span>
+                    <Image src={"/order.png"} alt='order now' width={20} height={20} className=''/>
                 </button>
             </div>
             {/* image container */}
