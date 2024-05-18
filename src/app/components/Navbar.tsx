@@ -29,7 +29,7 @@ const Navbar = () => {
             {/* right links */}
             <div className='hidden md:flex gap-4 items-center justify-end flex-1'>
                 <div className='bg-blue-100 p-1 rounded-md md:absolute top-3 r-2 lg:static flex items-center gap-2 cursor-pointer'>
-                    <Image src={"phone.svg"} width={20} height={20} alt='phone' />
+                    <Image src={"/phone.svg"} width={20} height={20} alt='phone' />
                     <span>+256701123123</span>
                 </div>
                 {!user ? (<Link href={"/login"}> Login</Link>)
