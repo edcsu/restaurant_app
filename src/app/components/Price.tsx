@@ -40,7 +40,7 @@ const Price = ({price, id, options}: Props) => {
                         </button>
                     </div>
                 </div>
-                <button className='bg-green-500 w-56 text-white p-3 flex gap-2 uppercase'>
+                <button className='bg-green-500 w-56 text-white px-2 py-3 flex gap-1 uppercase'>
                     <span className=''>
                         Add to cart
                     </span>
