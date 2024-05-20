@@ -8,24 +8,24 @@ const LoginPage = () => {
             {/* Box */}
             <div className='h-full shadow-xl rounded-md flex flex-col md:flex-row'>
                 {/* image container */}
-                <div className='relative'>
-                    <Image src={"/login.svg"} alt='login' fill />
+                <div className='relative h-1/3 w-full'>
+                    <Image src={"/login.svg"} alt='login' fill className='object-cover'/>
                 </div>
                 {/* form container */}
-                <div className=''>
-                    <h1>Welcome</h1>
+                <div className='p-10 flex flex-col gap-8'>
+                    <h1 className='font-bold text-xl'>Welcome</h1>
                     <p>
                         Log into your account or create a new one using the social buttons
                     </p>
-                    <button className='flex gap-4 ring-1 ring-orange-100 rounded-md'>
+                    <button className='flex gap-4 p-4 ring-1 ring-orange-100 rounded-md'>
                         <Image src={"/google.svg"} alt='login' height={20} width={20} className='onject-contain'/>
                         <span>Sign in with Google</span>
                     </button>
-                    <button className='flex gap-4 ring-1 ring-orange-100 rounded-md'>
+                    <button className='flex gap-4 p-4 ring-1 ring-orange-100 rounded-md'>
                         <Image src={"/facebook.svg"} alt='login' height={20} width={20} className='onject-contain'/>
                         <span>Sign in with Facebook</span>
                     </button>
-                    <p>Have a problem? <Link href={"/"} className='text-underline'>Contact us</Link></p>
+                    <p className='text-sm'>Have a problem? <Link href={"/"} className='underline'>Contact us</Link></p>
                 </div>
             </div>
         </div>
