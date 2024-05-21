@@ -23,7 +23,7 @@ const Menu = () => {
             { open && <div className=' text-white bg-orange-500 absolute left-0 top-24 w-full h-[calc(100vh-6rem)] flex flex-col gap-8 items-center justify-center text-3xl z-10'>
                 {links.map(link => <Link key={link.id} href={link.url} onClick={()=> setOpen(false)} >{link.title}</Link>)}
                 { user ? (<Link href={"/login"} onClick={()=> setOpen(false)} >Login</Link>)
-                 : (<Link href={"/login"} onClick={()=> setOpen(false)} >Orders</Link>) }
+                 : (<Link href={"/orders"} onClick={()=> setOpen(false)} >Orders</Link>) }
                 <CartIcon />
             </div> }
         </div>
